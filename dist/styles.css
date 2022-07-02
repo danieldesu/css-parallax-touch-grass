@@ -1,0 +1,118 @@
+:root {
+  --main-green: #5dbd5c;
+}
+
+html {
+  background-color: var(--main-green);
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica", sans-serif;
+  background-color: var(--main-green);
+}
+
+/* Parallax in header, wrapper and parallax containers dealth with accordingly for perspective... */
+.wrapper {
+  /* "Scrolling context" */
+  height: 100vh;
+  perspective: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+header {
+  /* parallax container essentially, inside wrapper which also does necessary things */
+  transform-style: preserve-3d;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  z-index: -1;
+}
+
+.parallax-background,
+.parallax-foreground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.parallax-background {
+  transform: translateZ(-10px) scale(2);
+  object-fit: cover;
+}
+
+.parallax-foreground {
+  transform: translateZ(-5px) scale(1.5);
+  object-fit: contain;
+}
+
+.parallax-text {
+  color: white;
+  font-size: 5rem;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* End of parallax... */
+
+/* Info table*/
+
+.benefits {
+  background-color: var(--main-green);
+  height: 100vh;
+  border-top: 1px solid #56ae54;
+  text-align: center;
+}
+
+.benefits h2 {
+  color: rgb(4, 44, 0);
+}
+
+.benefits table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.benefits table tr {
+  background-color: white;
+}
+
+.benefits table th {
+  padding: 12px 10px;
+  background-color: var(--main-green);
+  color: white;
+  text-shadow: 0 0 2px rgb(255, 225, 180);
+  font-size: 1.1em;
+}
+
+.benefits table td {
+  padding: 10px;
+  border: 3px solid rgb(7, 81, 0);
+}
+
+.benefits table tr:nth-child(even) {
+  background-color: #eaecee;
+}
+
+.benefits table tfoot td {
+  text-align: center;
+  color: rgb(185, 120, 0);
+}
+
+.benefits table .highlight-table {
+  border: 3px solid #ed6666;
+  color: #ed6666;
+}
+
+.benefits table thead th:first-child {
+  background-color: #ed6666;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: none;
+  outline: 1.8px solid #ed6666;
+  color: white;
+}
