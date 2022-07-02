@@ -42,12 +42,12 @@ header {
 }
 
 .parallax-background {
-  transform: translateZ(-10px) scale(2);
+  transform: translateZ(-10px) scale(2.1);
   object-fit: cover;
 }
 
 .parallax-foreground {
-  transform: translateZ(-5px) scale(1.5);
+  transform: translateZ(-5px) scale(1.6);
   object-fit: contain;
 }
 
